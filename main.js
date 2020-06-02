@@ -223,27 +223,27 @@ window.onload = function () {
     __spreadArrays(Array(10000)).map(function (_, j) {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
         var game = createGame(createBoard(levels[0]), 0);
-        if (((_a = game.board.cells[0][0]) === null || _a === void 0 ? void 0 : _a.current) == "knight" && game.board.player.x != 0 && game.board.player.y != 0)
+        if (((_a = game.board.cells[0][0]) === null || _a === void 0 ? void 0 : _a.current) == "knight" && !(game.board.player.x == 0 && game.board.player.y == 0))
             pattern_0++;
-        if (((_b = game.board.cells[1][2]) === null || _b === void 0 ? void 0 : _b.current) == "knight" && game.board.player.x != 1 && game.board.player.y != 2 ||
-            ((_c = game.board.cells[2][1]) === null || _c === void 0 ? void 0 : _c.current) == "knight" && game.board.player.x != 2 && game.board.player.y != 1)
+        if (((_b = game.board.cells[1][2]) === null || _b === void 0 ? void 0 : _b.current) == "knight" && !(game.board.player.x == 1 && game.board.player.y == 2) ||
+            ((_c = game.board.cells[2][1]) === null || _c === void 0 ? void 0 : _c.current) == "knight" && !(game.board.player.x == 2 && game.board.player.y == 1))
             pattern_1++;
-        if (((_d = game.board.cells[0][2]) === null || _d === void 0 ? void 0 : _d.current) == "knight" && game.board.player.x != 0 && game.board.player.y != 2 ||
-            ((_e = game.board.cells[2][0]) === null || _e === void 0 ? void 0 : _e.current) == "knight" && game.board.player.x != 2 && game.board.player.y != 0 ||
-            ((_f = game.board.cells[1][3]) === null || _f === void 0 ? void 0 : _f.current) == "knight" && game.board.player.x != 1 && game.board.player.y != 3 ||
-            ((_g = game.board.cells[3][1]) === null || _g === void 0 ? void 0 : _g.current) == "knight" && game.board.player.x != 3 && game.board.player.y != 1 ||
-            ((_h = game.board.cells[3][3]) === null || _h === void 0 ? void 0 : _h.current) == "knight" && game.board.player.x != 3 && game.board.player.y != 3)
+        if (((_d = game.board.cells[0][2]) === null || _d === void 0 ? void 0 : _d.current) == "knight" && !(game.board.player.x == 0 && game.board.player.y == 2) ||
+            ((_e = game.board.cells[2][0]) === null || _e === void 0 ? void 0 : _e.current) == "knight" && !(game.board.player.x == 2 && game.board.player.y == 0) ||
+            ((_f = game.board.cells[1][3]) === null || _f === void 0 ? void 0 : _f.current) == "knight" && !(game.board.player.x == 1 && game.board.player.y == 3) ||
+            ((_g = game.board.cells[3][1]) === null || _g === void 0 ? void 0 : _g.current) == "knight" && !(game.board.player.x == 3 && game.board.player.y == 1) ||
+            ((_h = game.board.cells[3][3]) === null || _h === void 0 ? void 0 : _h.current) == "knight" && !(game.board.player.x == 3 && game.board.player.y == 3))
             pattern_2++;
-        if (((_j = game.board.cells[0][1]) === null || _j === void 0 ? void 0 : _j.current) == "knight" && game.board.player.x != 0 && game.board.player.y != 1 ||
-            ((_k = game.board.cells[1][0]) === null || _k === void 0 ? void 0 : _k.current) == "knight" && game.board.player.x != 1 && game.board.player.y != 0 ||
-            ((_l = game.board.cells[2][3]) === null || _l === void 0 ? void 0 : _l.current) == "knight" && game.board.player.x != 2 && game.board.player.y != 3 ||
-            ((_m = game.board.cells[3][2]) === null || _m === void 0 ? void 0 : _m.current) == "knight" && game.board.player.x != 3 && game.board.player.y != 2)
+        if (((_j = game.board.cells[0][1]) === null || _j === void 0 ? void 0 : _j.current) == "knight" && !(game.board.player.x == 0 && game.board.player.y == 1) ||
+            ((_k = game.board.cells[1][0]) === null || _k === void 0 ? void 0 : _k.current) == "knight" && !(game.board.player.x == 1 && game.board.player.y == 0) ||
+            ((_l = game.board.cells[2][3]) === null || _l === void 0 ? void 0 : _l.current) == "knight" && !(game.board.player.x == 2 && game.board.player.y == 3) ||
+            ((_m = game.board.cells[3][2]) === null || _m === void 0 ? void 0 : _m.current) == "knight" && !(game.board.player.x == 3 && game.board.player.y == 2))
             pattern_3++;
-        if (((_o = game.board.cells[1][1]) === null || _o === void 0 ? void 0 : _o.current) == "knight" && game.board.player.x != 1 && game.board.player.y != 1 ||
-            ((_p = game.board.cells[2][2]) === null || _p === void 0 ? void 0 : _p.current) == "knight" && game.board.player.x != 2 && game.board.player.y != 2)
+        if (((_o = game.board.cells[1][1]) === null || _o === void 0 ? void 0 : _o.current) == "knight" && !(game.board.player.x == 1 && game.board.player.y == 1) ||
+            ((_p = game.board.cells[2][2]) === null || _p === void 0 ? void 0 : _p.current) == "knight" && !(game.board.player.x == 2 && game.board.player.y == 2))
             pattern_4++;
-        if (((_q = game.board.cells[0][3]) === null || _q === void 0 ? void 0 : _q.current) == "knight" && game.board.player.x != 0 && game.board.player.y != 3 ||
-            ((_r = game.board.cells[3][0]) === null || _r === void 0 ? void 0 : _r.current) == "knight" && game.board.player.x != 3 && game.board.player.y != 0)
+        if (((_q = game.board.cells[0][3]) === null || _q === void 0 ? void 0 : _q.current) == "knight" && !(game.board.player.x == 0 && game.board.player.y == 3) ||
+            ((_r = game.board.cells[3][0]) === null || _r === void 0 ? void 0 : _r.current) == "knight" && !(game.board.player.x == 3 && game.board.player.y == 0))
             pattern_5++;
         console.log({
             number: j,
@@ -252,7 +252,8 @@ window.onload = function () {
             pattern_2: pattern_2,
             pattern_3: pattern_3,
             pattern_4: pattern_4,
-            pattern_5: pattern_5
+            pattern_5: pattern_5,
+            board: game.board
         });
     });
     document.body.innerHTML = "Pattern 0: " + pattern_0.toString() + "<br>";
