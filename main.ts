@@ -260,15 +260,44 @@ window.onload = () => {
         ],
     ];
 
+    var pattern_0 = 0;
     var pattern_1 = 0;
     var pattern_2 = 0;
+    var pattern_3 = 0;
+    var pattern_4 = 0;
+    var pattern_5 = 0;
     [...Array(10000)].map((_, j) => {
         let game: Game = createGame(createBoard(levels[0]), 0);
-        if (game.board.cells[0][0]?.current == "knight") pattern_1++;
-        if (game.board.cells[1][2]?.current == "knight" && game.board.player != { x: 1, y: 2 } ||
-            game.board.cells[2][1]?.current == "knight" && game.board.player != { x: 2, y: 1 }) pattern_2++;
-        console.log({ number: j, pattern_1: pattern_1, pattern_2: pattern_2 });
+        if (game.board.cells[0][0]?.current == "knight" && game.board.player.x != 0 && game.board.player.y != 0) pattern_0++;
+        if (game.board.cells[1][2]?.current == "knight" && game.board.player.x != 1 && game.board.player.y != 2 ||
+            game.board.cells[2][1]?.current == "knight" && game.board.player.x != 2 && game.board.player.y != 1) pattern_1++;
+        if (game.board.cells[0][2]?.current == "knight" && game.board.player.x != 0 && game.board.player.y != 2 ||
+            game.board.cells[2][0]?.current == "knight" && game.board.player.x != 2 && game.board.player.y != 0 ||
+            game.board.cells[1][3]?.current == "knight" && game.board.player.x != 1 && game.board.player.y != 3 ||
+            game.board.cells[3][1]?.current == "knight" && game.board.player.x != 3 && game.board.player.y != 1 ||
+            game.board.cells[3][3]?.current == "knight" && game.board.player.x != 3 && game.board.player.y != 3) pattern_2++;
+        if (game.board.cells[0][1]?.current == "knight" && game.board.player.x != 0 && game.board.player.y != 1 ||
+            game.board.cells[1][0]?.current == "knight" && game.board.player.x != 1 && game.board.player.y != 0 ||
+            game.board.cells[2][3]?.current == "knight" && game.board.player.x != 2 && game.board.player.y != 3 ||
+            game.board.cells[3][2]?.current == "knight" && game.board.player.x != 3 && game.board.player.y != 2) pattern_3++;
+        if (game.board.cells[1][1]?.current == "knight" && game.board.player.x != 1 && game.board.player.y != 1 ||
+            game.board.cells[2][2]?.current == "knight" && game.board.player.x != 2 && game.board.player.y != 2) pattern_4++;
+        if (game.board.cells[0][3]?.current == "knight" && game.board.player.x != 0 && game.board.player.y != 3 ||
+            game.board.cells[3][0]?.current == "knight" && game.board.player.x != 3 && game.board.player.y != 0) pattern_5++;
+        console.log({
+            number: j,
+            pattern_0: pattern_0,
+            pattern_1: pattern_1,
+            pattern_2: pattern_2,
+            pattern_3: pattern_3,
+            pattern_4: pattern_4,
+            pattern_5: pattern_5,
+        });
     })
-    document.body.innerHTML = "Pattern 1: " + pattern_1.toString() + "<br>";
-    document.body.innerHTML += "Pattern 2: " + pattern_2.toString();
+    document.body.innerHTML = "Pattern 0: " + pattern_0.toString() + "<br>";
+    document.body.innerHTML += "Pattern 1: " + pattern_1.toString() + "<br>";
+    document.body.innerHTML += "Pattern 2: " + pattern_2.toString() + "<br>";
+    document.body.innerHTML += "Pattern 3: " + pattern_3.toString() + "<br>";
+    document.body.innerHTML += "Pattern 4: " + pattern_4.toString() + "<br>";
+    document.body.innerHTML += "Pattern 5: " + pattern_5.toString() + "<br>";
 };
